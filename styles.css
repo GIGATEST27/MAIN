@@ -66,21 +66,32 @@ img {
 }
 
 .topic-container {
+    display: flex;
+    align-items: flex-start; 
     margin-bottom: 20px;
 }
 
-.topic {
+.topic-container img {
+    margin-right: 20px; 
+    flex-shrink: 0; 
+}
+
+.topic-container .text-content {
+    text-align: left;
+}
+
+.topic-container .topic {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.content {
-    text-align: left;
-    margin: 0 20px;
+.topic-container .content {
+    margin: 0;
     line-height: 1.6;
     color: #333;
 }
+
 section {
     display: none;
     opacity: 0;
@@ -92,7 +103,7 @@ section.active {
     opacity: 1;
 }
 
-/* 下拉選單樣式 */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -129,14 +140,9 @@ nav ul li:hover ul.dropdown {
 nav ul li ul.dropdown li {
     display: block;
     margin: 0;
-    padding: 10px 20px; /* 增加內邊距 */
+    padding: 10px 20px; 
 }
 
 nav ul li ul.dropdown li a {
-    font-size: 12px; /* 調整字體大小 */
-}
-
-.topic-container {
-    text-align: left;
-    padding: 20px;
+    font-size: 12px; 
 }
